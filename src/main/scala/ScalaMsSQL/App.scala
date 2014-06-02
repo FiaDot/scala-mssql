@@ -5,6 +5,22 @@ import java.sql.{Connection, DriverManager, ResultSet};
 //import java.sql.Connection
 import com.microsoft.sqlserver.jdbc._
 
+/*
+	-- Table Schema
+
+	CREATE TABLE [dbo].[TblAccount](
+		[account_idx] [bigint] NOT NULL,
+		[name] [nvarchar](100) NULL,
+		[gold] [int] NULL,
+	 CONSTRAINT [PK_TblAccount] PRIMARY KEY NONCLUSTERED 
+	(
+		[account_idx] ASC
+	)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+	) ON [PRIMARY]
+	
+	GO
+ 
+ */
 
 object App {
 	def main(args: Array[String]): Unit = {
